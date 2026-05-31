@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBT04 - Positioning Playground</title>
+    <link rel="stylesheet" href="positioning.css">
+</head>
+<body id="top">
+    <header class="fixed-header">
+        <h1>ShopTLU</h1>
+        <nav>
+            <a href="#top">Trang chủ</a>
+            <a href="#products">Sản phẩm</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+    </header>
+
+    <main class="page-layout">
+        <aside class="sidebar">
+            <h2>Bộ lọc</h2>
+            <ul>
+                <li>Điện thoại</li>
+                <li>Laptop</li>
+                <li>Phụ kiện</li>
+                <li>Khuyến mãi</li>
+            </ul>
+        </aside>
+
+        <section id="products" class="content">
+            <h2>Sản phẩm nổi bật</h2>
+
+            <article class="product-card">
+                <span class="badge">HOT</span>
+                <img src="https://placehold.co/300x180" alt="iPhone 16 Pro">
+                <h3>iPhone 16 Pro</h3>
+                <p>Điện thoại cao cấp, camera tốt, hiệu năng mạnh.</p>
+                <p><strong>25.990.000đ</strong></p>
+            </article>
+
+            <article class="product-card">
+                <span class="badge">HOT</span>
+                <img src="https://placehold.co/300x180" alt="MacBook Pro">
+                <h3>MacBook Pro</h3>
+                <p>Laptop phù hợp học tập, lập trình và thiết kế.</p>
+                <p><strong>45.990.000đ</strong></p>
+            </article>
+
+            <article class="product-card">
+                <span class="badge">HOT</span>
+                <img src="https://placehold.co/300x180" alt="Tai nghe Bluetooth">
+                <h3>Tai nghe Bluetooth</h3>
+                <p>Âm thanh rõ, pin lâu, dễ mang theo.</p>
+                <p><strong>990.000đ</strong></p>
+            </article>
+
+            <section class="long-content">
+                <h2>Nội dung cuộn trang</h2>
+                <p>Phần này tạo nội dung dài để kiểm tra fixed header và sticky sidebar khi cuộn trang.</p>
+                <p>Cuộn xuống để thấy header luôn nằm ở trên cùng, sidebar dính bên trái và nút lên đầu trang nằm góc phải dưới.</p>
+            </section>
+        </section>
+    </main>
+
+    <a class="top-button" href="#top" aria-label="Lên đầu trang">↑</a>
+
+    <footer id="contact">
+        <p>&copy; 2026 ShopTLU</p>
+    </footer>
+</body>
+</html>

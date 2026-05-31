@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #222;
+}
+
+.shop-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr) 200px;
+    grid-template-areas:
+        "header header header"
+        "hero hero hero"
+        "sidebar main ads"
+        "footer footer footer";
+    gap: 20px;
+    padding: 20px;
+}
+
+.site-header {
+    grid-area: header;
+    background: #111827;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header a {
+    color: white;
+    margin-left: 16px;
+    text-decoration: none;
+}
+
+.hero {
+    grid-area: hero;
+    background: #dbeafe;
+    padding: 30px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.hero-card {
+    grid-column: span 2;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: white;
+    padding: 18px;
+    border: 1px solid #ddd;
+}
+
+.sidebar label {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.main-content {
+    grid-area: main;
+    background: white;
+    padding: 18px;
+    border: 1px solid #ddd;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.product-card img,
+.ads img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ads {
+    grid-area: ads;
+    background: white;
+    padding: 18px;
+    border: 1px solid #ddd;
+}
+
+.site-footer {
+    grid-area: footer;
+    text-align: center;
+    background: #111827;
+    color: white;
+    padding: 20px;
+}
+
+@media (max-width: 900px) {
+    .shop-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "hero"
+            "sidebar"
+            "main"
+            "ads"
+            "footer";
+    }
+
+    .site-header {
+        display: block;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-card {
+        grid-column: auto;
+    }
+}

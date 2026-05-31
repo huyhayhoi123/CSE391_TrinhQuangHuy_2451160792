@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBT04 - CSS Grid Layout</title>
+    <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+    <main class="shop-grid">
+        <header class="site-header">
+            <h1>ShopTLU Grid Store</h1>
+            <nav>
+                <a href="#">Trang chủ</a>
+                <a href="#">Sản phẩm</a>
+                <a href="#">Khuyến mãi</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <article class="hero-card">
+                <h2>Sản phẩm nổi bật hôm nay</h2>
+                <p>Giảm giá phụ kiện công nghệ cho sinh viên.</p>
+                <a href="#">Xem ngay</a>
+            </article>
+        </section>
+
+        <aside class="sidebar">
+            <h2>Bộ lọc</h2>
+            <label><input type="checkbox"> Điện thoại</label>
+            <label><input type="checkbox"> Laptop</label>
+            <label><input type="checkbox"> Phụ kiện</label>
+            <label><input type="checkbox"> Dưới 1 triệu</label>
+        </aside>
+
+        <section class="main-content">
+            <h2>Danh sách sản phẩm</h2>
+            <section class="product-grid" aria-label="Product cards">
+                <article class="product-card"><img src="https://placehold.co/250x160" alt="Bàn phím"><h3>Bàn phím</h3><p>699.000đ</p></article>
+                <article class="product-card"><img src="https://placehold.co/250x160" alt="Chuột"><h3>Chuột</h3><p>259.000đ</p></article>
+                <article class="product-card"><img src="https://placehold.co/250x160" alt="Màn hình"><h3>Màn hình</h3><p>2.490.000đ</p></article>
+                <article class="product-card"><img src="https://placehold.co/250x160" alt="Tai nghe"><h3>Tai nghe</h3><p>399.000đ</p></article>
+                <article class="product-card"><img src="https://placehold.co/250x160" alt="Laptop"><h3>Laptop</h3><p>12.990.000đ</p></article>
+                <article class="product-card"><img src="https://placehold.co/250x160" alt="Webcam"><h3>Webcam</h3><p>590.000đ</p></article>
+            </section>
+        </section>
+
+        <aside class="ads">
+            <h2>Quảng cáo</h2>
+            <img src="https://placehold.co/180x300" alt="Banner quảng cáo">
+            <p>Ưu đãi sinh viên tháng này.</p>
+        </aside>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 ShopTLU Grid Store</p>
+        </footer>
+    </main>
+</body>
+</html>

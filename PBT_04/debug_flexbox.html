@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBT04 - Debug Flexbox</title>
+    <link rel="stylesheet" href="debug_flexbox.css">
+</head>
+<body>
+    <h1>Debug Flexbox</h1>
+
+    <section>
+        <h2>Lỗi 1: Card đã sửa để nút dính đáy</h2>
+        <section class="card-container">
+            <article class="card"><h3>Card ngắn</h3><p>Mô tả ngắn.</p><a class="btn" href="#">Mua</a></article>
+            <article class="card"><h3>Card dài</h3><p>Mô tả dài hơn để kiểm tra chiều cao card. Nội dung dài nhưng nút vẫn nằm dưới cùng.</p><a class="btn" href="#">Mua</a></article>
+            <article class="card"><h3>Card vừa</h3><p>Mô tả vừa.</p><a class="btn" href="#">Mua</a></article>
+        </section>
+    </section>
+
+    <section class="hero">
+        <article class="hero-content">
+            <h2>Lỗi 2: Hero đã căn giữa</h2>
+            <p>Nội dung nằm giữa cả ngang và dọc.</p>
+        </article>
+    </section>
+
+    <section class="layout">
+        <aside class="sidebar">Sidebar không bị co</aside>
+        <article class="content">Content dài. Content dài. Content dài. Content dài. Content dài. Content dài. Content dài.</article>
+    </section>
+</body>
+</html>
