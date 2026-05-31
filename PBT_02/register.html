@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản ShopTLU</title>
+</head>
+<body>
+    <header>
+        <h1>Đăng ký tài khoản ShopTLU</h1>
+    </header>
+
+    <main>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Thông tin cá nhân</legend>
+
+                <p>
+                    <label for="full-name">Họ tên:</label>
+                    <input type="text" id="full-name" name="full-name" required minlength="2" maxlength="50" placeholder="Nguyễn Văn A">
+                </p>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="you@email.com">
+                </p>
+
+                <p>
+                    <label for="phone">Số điện thoại:</label>
+                    <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="0901234567" title="Số điện thoại gồm đúng 10 chữ số">
+                </p>
+
+                <p>
+                    <label for="dob">Ngày sinh:</label>
+                    <input type="date" id="dob" name="dob" required max="2026-05-31" placeholder="Chọn ngày sinh">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tài khoản</legend>
+
+                <p>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required pattern="[A-Za-z0-9_]{3,20}" placeholder="huy_2006" title="Username gồm chữ, số, underscore và dài 3-20 ký tự">
+                </p>
+
+                <p>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required minlength="8" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}" placeholder="Matkhau123" title="Mật khẩu ít nhất 8 ký tự, có ít nhất 1 chữ hoa và 1 số">
+                </p>
+
+                <p>
+                    <label for="confirm-password">Xác nhận password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required minlength="8" pattern="(?=.*[A-Z])(?=.*[0-9]).{8,}" placeholder="Nhập lại mật khẩu" title="HTML chỉ kiểm tra định dạng, chưa kiểm tra giống password chính">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Thông tin giao hàng</legend>
+
+                <p>
+                    <label for="city">Thành phố:</label>
+                    <select id="city" name="city" required>
+                        <option value="">Chọn tỉnh/thành</option>
+                        <option value="ha-noi">Hà Nội</option>
+                        <option value="tp-hcm">TP. Hồ Chí Minh</option>
+                        <option value="thanh-hoa">Thanh Hóa</option>
+                        <option value="da-nang">Đà Nẵng</option>
+                        <option value="hai-phong">Hải Phòng</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="district">Quận/Huyện:</label>
+                    <select id="district" name="district" required>
+                        <option value="">Chọn quận/huyện</option>
+                        <option value="hoan-kiem">Hoàn Kiếm</option>
+                        <option value="dong-da">Đống Đa</option>
+                        <option value="cau-giay">Cầu Giấy</option>
+                        <option value="ha-dong">Hà Đông</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="address">Địa chỉ chi tiết:</label>
+                    <textarea id="address" name="address" rows="3" required placeholder="Số nhà, tên đường, phường/xã"></textarea>
+                </p>
+
+                <p>Giới tính:</p>
+                <p>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Nam</label>
+                </p>
+                <p>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Nữ</label>
+                </p>
+                <p>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Khác</label>
+                </p>
+            </fieldset>
+
+            <p>
+                <input type="checkbox" id="agree" name="agree" required>
+                <label for="agree">Tôi đồng ý với điều khoản sử dụng</label>
+            </p>
+
+            <p>
+                <button type="submit">Đăng ký</button>
+                <button type="reset">Nhập lại</button>
+            </p>
+        </form>
+    </main>
+</body>
+</html>

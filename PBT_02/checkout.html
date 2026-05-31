@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt hàng ShopTLU</title>
+</head>
+<body>
+    <header>
+        <h1>Form đặt hàng ShopTLU</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Phần 1: Giỏ hàng</h2>
+            <table border="1">
+                <caption>Giỏ hàng của bạn</caption>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Bàn phím cơ TLU K1</td>
+                        <td>699.000đ</td>
+                        <td>1</td>
+                        <td>699.000đ</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Chuột không dây TLU M2</td>
+                        <td>259.000đ</td>
+                        <td>2</td>
+                        <td>518.000đ</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Tai nghe TLU Sound H3</td>
+                        <td>399.000đ</td>
+                        <td>1</td>
+                        <td>399.000đ</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Tổng cộng</td>
+                        <td>1.616.000đ</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <section>
+            <h2>Phần 2 và 3: Form thanh toán</h2>
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Thanh toán</legend>
+
+                    <p>Phương thức thanh toán:</p>
+                    <p>
+                        <input type="radio" id="cod" name="payment" value="cod" required>
+                        <label for="cod">COD</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="bank" name="payment" value="bank">
+                        <label for="bank">Chuyển khoản</label>
+                    </p>
+                    <p>
+                        <input type="radio" id="wallet" name="payment" value="wallet">
+                        <label for="wallet">Ví điện tử</label>
+                    </p>
+
+                    <p>
+                        <label for="coupon">Mã giảm giá:</label>
+                        <input type="text" id="coupon" name="coupon" pattern="SALE[0-9]{4}" placeholder="SALE2026" title="Mã giảm giá có dạng SALE + 4 chữ số">
+                    </p>
+
+                    <p>
+                        <label for="note">Ghi chú:</label>
+                        <textarea id="note" name="note" rows="3" placeholder="Ghi chú thêm nếu có"></textarea>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Thông tin giao hàng</legend>
+
+                    <p>
+                        <label for="shipping-name">Họ tên người nhận:</label>
+                        <input type="text" id="shipping-name" name="shipping-name" required placeholder="Trịnh Quang Huy">
+                    </p>
+
+                    <p>
+                        <label for="shipping-phone">Số điện thoại:</label>
+                        <input type="tel" id="shipping-phone" name="shipping-phone" required pattern="[0-9]{10}" placeholder="0901234567">
+                    </p>
+
+                    <p>
+                        <label for="shipping-address">Địa chỉ:</label>
+                        <textarea id="shipping-address" name="shipping-address" rows="3" required placeholder="Nhập địa chỉ nhận hàng"></textarea>
+                    </p>
+
+                    <p>
+                        <label for="delivery-date">Ngày giao hàng mong muốn:</label>
+                        <input type="date" id="delivery-date" name="delivery-date" required min="2026-06-01">
+                    </p>
+
+                    <p>
+                        <label for="delivery-time">Khung giờ:</label>
+                        <select id="delivery-time" name="delivery-time" required>
+                            <option value="">Chọn khung giờ</option>
+                            <option value="morning">Sáng 8-12h</option>
+                            <option value="afternoon">Chiều 14-18h</option>
+                            <option value="evening">Tối 18-21h</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="delivery-days">Thời gian giao hàng:</label>
+                        <input type="range" id="delivery-days" name="delivery-days" min="1" max="7" step="1" value="3">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Nâng cao</legend>
+
+                    <p>
+                        <label for="product-search">Tìm kiếm sản phẩm:</label>
+                        <input list="product-list" id="product-search" name="product-search" placeholder="Nhập tên sản phẩm">
+                        <datalist id="product-list">
+                            <option value="Bàn phím cơ TLU K1">
+                            <option value="Chuột không dây TLU M2">
+                            <option value="Tai nghe TLU Sound H3">
+                        </datalist>
+                    </p>
+
+                    <p>Tổng tiền tĩnh: <output name="total">1.616.000đ</output></p>
+
+                    <p>
+                        <label for="point">Điểm tích lũy:</label>
+                        <meter id="point" min="0" max="100" value="70">70/100</meter>
+                    </p>
+                </fieldset>
+
+                <button type="submit" aria-label="Xác nhận đặt hàng">Đặt hàng</button>
+                <button type="reset">Nhập lại</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ShopTLU</p>
+    </footer>
+</body>
+</html>
