@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Box Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            line-height: 1.6;
+        }
+
+        .box {
+            width: 300px;
+            padding: 20px;
+            border: 5px solid black;
+            margin-bottom: 20px;
+            background-color: lightblue;
+        }
+
+        .content-box {
+            box-sizing: content-box;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+        }
+
+        .box-a {
+            margin-bottom: 25px;
+            background-color: lightgreen;
+        }
+
+        .box-b {
+            margin-top: 40px;
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chứng minh content-box và border-box</h1>
+
+    <div class="box content-box">
+        Content-box: width 300px + padding 40px + border 10px = 350px
+    </div>
+
+    <div class="box border-box">
+        Border-box: tổng chiều rộng vẫn là 300px
+    </div>
+
+    <h2>Margin Collapse</h2>
+    <div class="box box-a">Box A: margin-bottom 25px</div>
+    <div class="box box-b">Box B: margin-top 40px</div>
+</body>
+</html>

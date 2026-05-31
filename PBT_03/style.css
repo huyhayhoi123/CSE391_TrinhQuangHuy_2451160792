@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f5f9;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    padding: 24px;
+    text-align: center;
+}
+
+header nav {
+    margin-top: 15px;
+}
+
+header nav a {
+    color: #e0f2fe;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+header nav a.active {
+    background-color: white;
+    color: #1e3a8a;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+main,
+aside {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.profile-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+}
+
+.profile-card img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #1e3a8a;
+}
+
+#ky-nang table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    border: 1px solid #9ca3af;
+    padding: 10px;
+    text-align: left;
+}
+
+thead tr {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e5e7eb;
+}
+
+tbody tr:hover {
+    background-color: #bfdbfe;
+}
+
+tfoot td {
+    background-color: #dbeafe;
+    font-style: italic;
+}
+
+footer {
+    background-color: #111827;
+    color: #d1d5db;
+    text-align: center;
+    padding: 15px;
+}

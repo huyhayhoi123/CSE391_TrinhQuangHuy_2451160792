@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBT 03 - Debug Layout</title>
+    <link rel="stylesheet" href="debug_layout.css">
+</head>
+<body>
+    <header>
+        <h1>Debug CSS Layout</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Layout gốc bị vỡ</h2>
+            <p>Tổng chiều rộng thực tế = 1064px, lớn hơn container 960px.</p>
+            <div class="container broken">
+                <aside class="sidebar">Sidebar</aside>
+                <article class="content">Content bị đẩy xuống dòng mới</article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Cách sửa 1: Dùng border-box</h2>
+            <div class="container fix-border-box">
+                <aside class="sidebar">Sidebar 300px</aside>
+                <article class="content">Content 660px</article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Cách sửa 2: Không dùng border-box, giảm width content</h2>
+            <div class="container fix-width">
+                <aside class="sidebar">Sidebar thực tế 342px</aside>
+                <article class="content">Content width 556px, thực tế 618px</article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
