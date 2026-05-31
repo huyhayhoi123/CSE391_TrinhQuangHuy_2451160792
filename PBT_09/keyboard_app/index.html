@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard App - PBT09</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header>
+            <h1>Keyboard Gallery</h1>
+            <p>← → chuyển ảnh, Space play/pause, Ctrl+K mở command palette, Esc đóng.</p>
+        </header>
+
+        <section class="gallery" aria-label="Thư viện ảnh">
+            <button id="prevBtn" aria-label="Ảnh trước">←</button>
+            <figure>
+                <img id="galleryImage" src="https://placehold.co/640x360?text=Image+1" alt="Ảnh số 1">
+                <figcaption id="caption">Ảnh số 1</figcaption>
+            </figure>
+            <button id="nextBtn" aria-label="Ảnh tiếp theo">→</button>
+        </section>
+
+        <section class="actions">
+            <button id="playBtn" aria-label="Play hoặc pause slideshow">Play</button>
+            <button id="openPalette" aria-label="Mở command palette">Ctrl+K Command</button>
+        </section>
+    </main>
+
+    <section id="imageModal" class="modal" role="dialog" aria-modal="true">
+        <article class="modal-content">
+            <button id="closeImageModal" aria-label="Đóng modal">Đóng</button>
+            <img id="modalImage" src="https://placehold.co/640x360?text=Image+1" alt="Ảnh phóng to">
+        </article>
+    </section>
+
+    <section id="palette" class="palette" role="dialog" aria-modal="true" aria-labelledby="paletteTitle">
+        <article class="palette-box">
+            <h2 id="paletteTitle">Command Palette</h2>
+            <input id="commandInput" type="text" placeholder="Gõ lệnh..." aria-label="Tìm lệnh">
+            <ul id="commandList"></ul>
+        </article>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

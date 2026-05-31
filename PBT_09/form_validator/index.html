@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validator - PBT09</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <h1>Form đăng ký</h1>
+        <form id="registerForm" novalidate>
+            <section class="field">
+                <label for="fullName">Họ tên</label>
+                <input id="fullName" name="fullName" type="text" placeholder="Trịnh Quang Huy">
+                <small class="message" id="nameMsg"></small>
+            </section>
+
+            <section class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="huy@example.com">
+                <small class="message" id="emailMsg"></small>
+            </section>
+
+            <section class="field">
+                <label for="password">Mật khẩu</label>
+                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu mạnh">
+                <section class="meter" aria-label="Password strength">
+                    <span id="strengthBar"></span>
+                </section>
+                <small class="message" id="passwordMsg"></small>
+            </section>
+
+            <section class="field">
+                <label for="confirmPassword">Xác nhận mật khẩu</label>
+                <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Nhập lại mật khẩu">
+                <small class="message" id="confirmMsg"></small>
+            </section>
+
+            <section class="field">
+                <label for="phone">Số điện thoại</label>
+                <input id="phone" name="phone" type="tel" placeholder="0901-234-567" maxlength="12">
+                <small class="message" id="phoneMsg"></small>
+            </section>
+
+            <button id="submitBtn" type="submit" disabled>Đăng ký</button>
+        </form>
+    </main>
+
+    <section id="successModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <article class="modal-content">
+            <h2 id="modalTitle">Đăng ký thành công!</h2>
+            <p id="modalInfo"></p>
+            <button id="closeModal" type="button">Đóng</button>
+        </article>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

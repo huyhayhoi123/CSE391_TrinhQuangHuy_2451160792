@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App - PBT09</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header>
+            <h1>Todo App</h1>
+            <p>Thêm, sửa, xóa, lọc và lưu todo bằng DOM + LocalStorage.</p>
+        </header>
+
+        <form id="todoForm" class="todo-form">
+            <label for="todoInput">Nhập việc cần làm</label>
+            <input id="todoInput" type="text" placeholder="Ví dụ: Học DOM" autocomplete="off">
+            <button type="submit">Thêm</button>
+        </form>
+
+        <section class="toolbar" aria-label="Bộ lọc todo">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="active">Active</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+            <button id="clearCompleted" type="button">Clear completed</button>
+        </section>
+
+        <p id="countText">0 items left</p>
+        <ul id="todoList" class="todo-list" aria-label="Danh sách todo"></ul>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

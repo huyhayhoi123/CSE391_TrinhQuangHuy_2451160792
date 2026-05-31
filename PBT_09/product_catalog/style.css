@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #111827;
+}
+
+body.dark-mode {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+.app-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    background: #2563eb;
+    color: white;
+}
+
+.controls {
+    width: min(1100px, 94%);
+    margin: 20px auto;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 1fr 220px;
+}
+
+.category-buttons {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+input,
+select,
+button {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    background: #1d4ed8;
+    color: white;
+    border: none;
+}
+
+button.active {
+    background: #0f172a;
+}
+
+.product-grid {
+    width: min(1100px, 94%);
+    margin: 0 auto 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: 0.2s;
+}
+
+.dark-mode .card,
+.dark-mode .modal-content {
+    background: #1e293b;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.price {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    place-items: center;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 20px;
+}
+
+.modal.open {
+    display: grid;
+}
+
+.modal-content {
+    width: min(520px, 96%);
+    background: white;
+    border-radius: 16px;
+    padding: 22px;
+}
+
+.close-modal {
+    float: right;
+    background: #dc2626;
+}
